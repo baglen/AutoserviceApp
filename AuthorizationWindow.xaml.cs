@@ -95,7 +95,7 @@ namespace AutoserviceApp
                 }
             }
             countErrorAuths++;
-            if (countErrorAuths == 3)
+            if (countErrorAuths % 3 == 0)
             {
                 MessageBox.Show("Превышено количество попыток входа!\nПовторите попытку через 10 секунд.", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
