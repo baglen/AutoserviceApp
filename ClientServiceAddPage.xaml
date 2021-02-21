@@ -1,0 +1,51 @@
+﻿<Page x:Class="AutoserviceApp.ClientServiceAddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoserviceApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientServiceAddPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="0" Background="#ffffe1" Grid.ColumnSpan="2"></Grid>
+        <TextBlock Grid.ColumnSpan="2" Text="Добавить предоставленную услугу" FontSize="30" HorizontalAlignment="Center"></TextBlock>
+        <Grid Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Клиент" FontSize="20" Grid.Row="0"></TextBlock>
+            <TextBlock Text="Услуга" FontSize="20" Grid.Row="1"></TextBlock>
+            <TextBlock Text="Дата начала" FontSize="20" Grid.Row="2"></TextBlock>
+            <TextBlock Text="Коментарий" FontSize="20" Grid.Row="3"></TextBlock>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+                <RowDefinition Height="45"></RowDefinition>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="comboBoxClient" Grid.Row="0" DisplayMemberPath="LastName" SelectedItem="{Binding Client}"></ComboBox>
+            <ComboBox x:Name="comboBoxService" Grid.Row="1" DisplayMemberPath="Title" SelectedItem="{Binding Service}"></ComboBox>
+            <DatePicker x:Name="datePickerBoxStart" Grid.Row="2"></DatePicker>
+            <TextBox x:Name="txtBoxDescription" Grid.Row="3" Height="35"></TextBox>
+        </Grid>
+        <Grid Grid.Row="3" Grid.ColumnSpan="2" Width="230">
+            <Button Content="Сохранить" Name="btnAdd" HorizontalAlignment="Center" Click="btnAdd_Click" ></Button>
+        </Grid>
+    </Grid>
+</Page>

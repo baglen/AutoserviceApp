@@ -1,0 +1,52 @@
+﻿<Window x:Class="AutoserviceApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoserviceApp"
+        mc:Ignorable="d"
+        Title="AutoserviceApp - Главная" Height="500" Width="800" Icon="Resources/service_logo.ico" WindowStartupLocation="CenterScreen" MinWidth="800" MinHeight="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="125"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Background="#ffffe1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="90"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Width="125" Height="150" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="26"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Text="Кубань" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold"></TextBlock>
+                <TextBlock Grid.Row="1" Text="Автосервис" FontSize="20" HorizontalAlignment="Center" FontWeight="Bold" ></TextBlock>
+                <Image Source="Resources\service_logo.png" Grid.Row="2"></Image>
+            </Grid>
+            <Grid VerticalAlignment="Bottom" Height="75" Margin="0,0,0,5" Grid.Row="2">
+                <Button VerticalAlignment="Top" Content="Назад" Name="btnBack"  Click="btnBack_Click"></Button>
+            <Button VerticalAlignment="Bottom" Content="Выйти" Name="btcLogout" Click="btcLogout_Click"></Button>
+            </Grid>
+            <Grid VerticalAlignment="Center" Height="195" Margin="0,0,0,0" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button  Grid.Row="0" Content="Пользователи" Name="btnUsers" Click="btnUsers_Click"></Button>
+                <Button  Grid.Row="0" Content="Отчеты" Name="btnReport" Click="btnReport_Click"></Button>
+                <Button Grid.Row="2" Content="Услуги" Name="btnServices" Click="btnServices_Click"></Button>
+                <Button Grid.Row="1" Content="Клиенты" Name="btnClients" Click="btnClients_Click"></Button>
+                <Button Grid.Row="4" Content="Предост. услуги" Name="btnOrders" Click="btnOrders_Click"></Button>
+                <Button Grid.Row="3" Content="Продукты" Name="btnProducts" Click="btnProducts_Click"></Button>
+            </Grid>
+        </Grid>
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Column="1"></Frame>
+    </Grid>
+</Window>

@@ -1,0 +1,46 @@
+﻿<Page x:Class="AutoserviceApp.ReportsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoserviceApp"
+      mc:Ignorable="d" 
+      IsVisibleChanged="Page_IsVisibleChanged"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReportsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Background="#ffffe1"></Grid>
+        <Grid Background="#ffffe1" Grid.Row="2"></Grid>
+        <StackPanel>
+            <RadioButton Content="Услуги" IsChecked="True" Name="radioService" Click="radioService_Click"></RadioButton>
+            <RadioButton Content="Товары" Name="radioProduct" Click="radioProduct_Click"></RadioButton>
+        </StackPanel>
+        <TextBlock x:Name="txtTitle" Text="Услуги" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <DataGrid x:Name="DGridServices" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Width="*" Binding="{Binding Title}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Cost}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Продолжительность" Width="*" Binding="{Binding DurationInSeconds}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Width="*" Binding="{Binding Description}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Скидка" Width="*" Binding="{Binding Discount}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Visibility="Collapsed" x:Name="DGridProducts" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название" Width="*" Binding="{Binding Title}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Cost}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Width="*" Binding="{Binding Description}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Активный" Width="*" Binding="{Binding IsActive}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Производитель" Width="*" Binding="{Binding Manufacturer.Name}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Row="2" Content="Сохранить" Name="btnSave" Click="btnSave_Click" HorizontalAlignment="Right"></Button>
+        <Button Grid.Row="2" Content="Печать" Name="btnPrint" Click="btnPrint_Click" HorizontalAlignment="Left"></Button>
+    </Grid>
+</Page>

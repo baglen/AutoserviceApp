@@ -1,0 +1,39 @@
+﻿<Window x:Class="AutoserviceApp.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AutoserviceApp"
+        mc:Ignorable="d"
+        Title="AutoserviceApp - Авторизация" Height="450" Width="250" ResizeMode="NoResize" Icon="Resources/service_logo.ico" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <TextBlock Text="Авторизация" Grid.Row="0" TextAlignment="Center" FontSize="30"></TextBlock>
+            <Image Source="Resources\service_logo.png" Grid.Row="1"></Image>
+        </Grid>
+        <Grid Grid.Row="1" Height="70">
+            <TextBlock Text="Введите логин ниже" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
+            <TextBox Name="txtBoxLogin" VerticalAlignment="Bottom"></TextBox>
+        </Grid>
+        <Grid Grid.Row="2" Height="100">
+            <TextBlock Text="Введите пароль ниже" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,5"></TextBlock>
+            <PasswordBox Name="passBoxPassword" VerticalAlignment="Center"></PasswordBox>
+            <TextBox Name="txtBoxPassword" VerticalAlignment="Center"></TextBox>
+            <Grid Margin="0,0,2,0" Height="30" Width="175" VerticalAlignment="Bottom">
+                <CheckBox HorizontalAlignment="Left" VerticalAlignment="Center" Name="checkBoxShowPass" Checked="checkBoxShowPass_Checked" Unchecked="checkBoxShowPass_Unchecked"/>
+                <TextBlock Name="txtBlockPassword" Text="Показать пароль" VerticalAlignment="Center" Margin="20,0,0,0"></TextBlock>
+            </Grid>
+        </Grid>
+        <Button Name="btnLogin" Grid.Row="3" Content="Войти" FontSize="20" Margin="0,0,0,20" Click="btnLogin_Click"></Button>
+    </Grid>
+</Window>

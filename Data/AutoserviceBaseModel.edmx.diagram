@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c05f3fd42f594a52bfd1c375c881fbd7" Name="Diagram1">
+        <EntityTypeShape EntityType="AutoserviceBaseModel.AuthHistory" Width="1.5" PointX="10.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.Client" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.ClientService" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.DocumentByService" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.Gender" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.Manufacturer" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.Role" Width="1.5" PointX="5.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.Service" Width="1.5" PointX="0.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.ServicePhoto" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.Tag" Width="1.5" PointX="3" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AutoserviceBaseModel.User" Width="1.5" PointX="8" PointY="7.375" IsExpanded="true" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_AuthHistory_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_ClientService_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_Product_Manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_ProductPhoto_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_ProductSale_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_User_Role1" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.FK_ServicePhoto_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.AttachedProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="AutoserviceBaseModel.TagOfClient" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

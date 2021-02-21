@@ -1,0 +1,42 @@
+﻿<Page x:Class="AutoserviceApp.UserInfoPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoserviceApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserInfoPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0" Background="#ffffe1">
+        <TextBlock  Text="Профиль" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30"></TextBlock>
+        </Grid>
+            
+        
+        <Border Grid.Row="1" Width="500" Height="300" BorderThickness="2" BorderBrush="Black" CornerRadius="8">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Name="roleImage" Width="180" HorizontalAlignment="Left" Margin="5"></Image>
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Name="txtBlockFirstName" Text="Имя: " FontSize="25" Grid.Row="0" VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Name="txtBlockLastName" Text="Фамилия: " FontSize="25" Grid.Row="1"  VerticalAlignment="Center"></TextBlock>
+                    <TextBlock Name="txtBlockRole" Text="Роль: " FontSize="25" Grid.Row="2"  VerticalAlignment="Center"></TextBlock>
+                </Grid>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

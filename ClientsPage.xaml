@@ -1,0 +1,89 @@
+﻿<Page x:Class="AutoserviceApp.ClientsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoserviceApp"
+      mc:Ignorable="d" 
+      IsVisibleChanged="Page_IsVisibleChanged"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientsPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Width="auto" Height="50" BorderThickness="0,0,0,1" BorderBrush="Black" Grid.Row="0" >
+            <Grid Grid.Row="0" Background="#ffffe1">
+                <TextBlock Text="Информация о клиентах" HorizontalAlignment="Center" FontSize="30" Grid.Row="0"></TextBlock>
+            </Grid>
+        </Border>
+        <Grid Grid.Row="1" Background="#ffffe1">
+            <TextBlock Text="Поиск"></TextBlock>
+            <TextBox x:Name="txtBoxSearch" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,5" Height="30" TextChanged="txtBoxSearch_TextChanged"></TextBox>
+        </Grid>
+        <Grid Grid.Row="1" Background="#ffffe1" Margin="200,0,0,0">
+            <TextBlock Text="Сортировка"></TextBlock>
+            <ComboBox x:Name="comboBoxSort" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,0,5" Height="30" SelectionChanged="comboBoxSort_SelectionChanged"></ComboBox>
+        </Grid>
+        <ListView Grid.Row="2" Name="ListViewClient" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalContentAlignment="Center" MouseDoubleClick="ListViewClient_MouseDoubleClick">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="20" Width="250">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Width="100" Grid.Row="1" Stretch="UniformToFill" HorizontalAlignment="Left" Margin="5">
+                            <Image.Source>
+                                <Binding Path="PhotoPath"></Binding>
+                            </Image.Source>
+                        </Image>
+                        <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="5,0,0,0">
+                            <TextBlock Text="Идентификатор: " HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Id}" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Row="3" Margin="5,0,0,0">
+                            <TextBlock Text="Пол: " HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Gender.Name}" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Row="4" Margin="5,0,0,0">
+                            <TextBlock Text="Телефон: " HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Phone}" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Row="5" Margin="5,0,0,0">
+                            <TextBlock Text="Эл. почта: " HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Email}" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Row="0">
+                            <TextBlock Text="{Binding LastName}" Margin="5"></TextBlock>
+                            <TextBlock Text="{Binding FirstName}" Margin="5"></TextBlock>
+                            <TextBlock Text="{Binding Patronymic}" Margin="5"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Row="6" Margin="5,0,0,0">
+                            <TextBlock Text="Дата рождения: " HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding Birthday}" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Row="7" Margin="5,0,0,0">
+                            <TextBlock Text="Дата регистрации: " HorizontalAlignment="Left"></TextBlock>
+                            <TextBlock Text="{Binding RegistrationDate}" HorizontalAlignment="Left"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>
