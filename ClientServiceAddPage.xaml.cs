@@ -54,7 +54,6 @@ namespace AutoserviceApp
             } 
             try
             {
-                currentClientService.StartTime = (DateTime)datePickerBoxStart.SelectedDate;
                 AutoserviceBaseEntities.getContext().ClientService.Add(currentClientService);
                 AutoserviceBaseEntities.getContext().SaveChanges();
                 MessageBox.Show("Данные успешно сохранены!", "Информация", MessageBoxButton.OK, MessageBoxImage.Information);
