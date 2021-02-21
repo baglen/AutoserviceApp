@@ -29,6 +29,7 @@ namespace AutoserviceApp
             DataContext = currentClientService;
             comboBoxClient.ItemsSource = AutoserviceBaseEntities.getContext().Client.ToList();
             comboBoxService.ItemsSource = AutoserviceBaseEntities.getContext().Service.ToList();
+            datePickerBoxStart.DisplayDateStart = DateTime.Now;
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)

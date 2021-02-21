@@ -41,7 +41,7 @@
             </Grid.RowDefinitions>
             <ComboBox x:Name="comboBoxClient" Grid.Row="0" DisplayMemberPath="LastName" SelectedItem="{Binding Client}"></ComboBox>
             <ComboBox x:Name="comboBoxService" Grid.Row="1" DisplayMemberPath="Title" SelectedItem="{Binding Service}"></ComboBox>
-            <DatePicker x:Name="datePickerBoxStart" Grid.Row="2"></DatePicker>
+            <DatePicker x:Name="datePickerBoxStart" Grid.Row="2" ></DatePicker>
             <TextBox x:Name="txtBoxDescription" Grid.Row="3" Height="35"></TextBox>
         </Grid>
         <Grid Grid.Row="3" Grid.ColumnSpan="2" Width="230">
