@@ -40,6 +40,12 @@
         <Style TargetType="local:EditUserPage">
             <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
         </Style>
+        <Style TargetType="local:ProductsPage">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+        </Style>
+        <Style TargetType="local:ReportsPage">
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+        </Style>
         <Style TargetType="TextBox">
             <Setter Property="Width" Value="175"></Setter>
             <Setter Property="Height" Value="35"></Setter>

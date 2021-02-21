@@ -17,12 +17,12 @@
         </Grid.RowDefinitions>
         <Grid Background="#ffffe1"></Grid>
         <Grid Background="#ffffe1" Grid.Row="2"></Grid>
-        <StackPanel>
+        <StackPanel VerticalAlignment="Center">
             <RadioButton Content="Услуги" IsChecked="True" Name="radioService" Click="radioService_Click"></RadioButton>
             <RadioButton Content="Товары" Name="radioProduct" Click="radioProduct_Click"></RadioButton>
         </StackPanel>
         <TextBlock x:Name="txtTitle" Text="Услуги" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <DataGrid x:Name="DGridServices" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid x:Name="DGridServices" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" RowHeaderWidth="0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Width="*" Binding="{Binding Title}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Cost}"></DataGridTextColumn>
@@ -31,7 +31,7 @@
                 <DataGridTextColumn Header="Скидка" Width="*" Binding="{Binding Discount}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid Visibility="Collapsed" x:Name="DGridProducts" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True">
+        <DataGrid Visibility="Collapsed" x:Name="DGridProducts" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" RowHeaderWidth="0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Название" Width="*" Binding="{Binding Title}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding Cost}"></DataGridTextColumn>
