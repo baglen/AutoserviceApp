@@ -23,12 +23,12 @@
         </Grid>
         <Grid Grid.Row="1" Height="70">
             <TextBlock Text="Введите логин ниже" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top"></TextBlock>
-            <TextBox Name="txtBoxLogin" VerticalAlignment="Bottom"></TextBox>
+            <TextBox Name="txtBoxLogin" VerticalAlignment="Bottom" TabIndex="1"></TextBox>
         </Grid>
         <Grid Grid.Row="2" Height="100">
             <TextBlock Text="Введите пароль ниже" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,5"></TextBlock>
             <PasswordBox Name="passBoxPassword" VerticalAlignment="Center"></PasswordBox>
-            <TextBox Name="txtBoxPassword" VerticalAlignment="Center"></TextBox>
+            <TextBox Name="txtBoxPassword" VerticalAlignment="Center" TabIndex="0"></TextBox>
             <Grid Margin="0,0,2,0" Height="30" Width="175" VerticalAlignment="Bottom">
                 <CheckBox HorizontalAlignment="Left" VerticalAlignment="Center" Name="checkBoxShowPass" Checked="checkBoxShowPass_Checked" Unchecked="checkBoxShowPass_Unchecked"/>
                 <TextBlock Name="txtBlockPassword" Text="Показать пароль" VerticalAlignment="Center" Margin="20,0,0,0"></TextBlock>

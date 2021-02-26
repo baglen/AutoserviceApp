@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -91,13 +92,14 @@ namespace AutoserviceApp
                 }
                 catch
                 {
-                    MessageBox.Show("Ошибка записи истории входа в базу данных!\nПроверьте соединение с базой данных.","Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Ошибка записи истории входа в базу данных!\nПроверьте правильность введенных данных.","Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
             countErrorAuths++;
             if (countErrorAuths % 3 == 0)
             {
                 MessageBox.Show("Превышено количество попыток входа!\nПовторите попытку через 10 секунд.", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                Thread.Sleep(10000);
             }
             try
             {
